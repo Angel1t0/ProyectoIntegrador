@@ -1,0 +1,21 @@
+h2{
+    color: white;
+    background-color: black;
+    font-size: 200%;
+    margin-top: 2%;
+    padding-left: 3%;
+}
+
+p{
+    color: black;
+    padding-left: 3%;
+    font-size: 110%;
+}
+
+ul{
+    padding-left: 5%;
+}
+
+ol{
+    padding-left: 5%;
+}

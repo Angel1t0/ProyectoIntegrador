@@ -1,0 +1,444 @@
+:root{
+    --main-white:#ffffff; /*Nombre de la variable de color de la cabecera*/
+    --main-red:#c71212;
+}
+*{
+	font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+body,html{ /*Estilos de la pagina*/
+    margin: 0; 
+    padding: 0;
+}
+body{
+    background-color: #f4f4f4;
+}
+header{
+    height: 40px; /*Ancho*/
+    padding: 10px; /*El relleno*/
+    width: calc(100% - 20px); /*Para cubrir el ancho de la pantalla*/
+    line-height: 40px; /*Linea de alto*/
+    display: flex; /*Para los logos, y opciones esten en una sola linea*/
+    background: var(--main-white); /*Usamos la variable del color para el fondo*/
+    position: fixed; /*Para que se quede siempre arriba de la pantalla*/
+    top: 0; /*Para asegurar la altura*/
+    left: 0;
+}
+
+/*Caracteristicas del logo*/
+.logo-place{
+    width: 150px; /*Ancho*/
+    justify-content: center; 
+    /*Para centrar*/
+    align-items: center; 
+    margin-top: 7px;
+}
+.logo-place img{
+    width: 100%; /*Para que tome el ancho del 100% del contenedor*/
+}
+/*Caracteristicas de la busqueda*/
+.search-place{ 
+    width: calc(100% - 440px);
+    display: flex; /*Todo en una fila*/
+    padding: 0px 20px;
+}
+input{
+	padding: 10px;
+	font-size: 15px;
+	background-color: #fefefe;
+	border:1px solid #ccc;
+	width: calc(100% - 62px);
+	font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+input:placeholder{
+	color: #ccc;
+}
+.search-place input{
+    padding: 10px;
+    font-size: 15px; 
+    background-color: #fefefe;
+    border: 1px solid #ccc;
+    width: calc(100% - 62px);
+    font-family: 'Zen Kaku Gothic Antique', sans-serif; /*Usamos esta fuente de la pagina google fonts*/
+}
+.search-place input:placeholder{ /*Pseudo clase del texto preestablecido*/
+    color: #ccc; 
+}
+.btn-main{
+    padding: 10px;
+    font-size: 15px;
+    background-color: #fefefe;
+    border-style: none;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.btn-search{
+    width: 40px;
+    color: #333;
+}
+/*Caracteristicas para las opciones (Ingresar, carrito, usuario)*/
+.options-place{
+    width: 250px;
+    display: flex;
+    justify-content: flex-end; /*Para justificar al final de la fila*/
+}
+.options-place h4{
+    margin: 0;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    color: #000;
+}
+.item-option{
+    padding: 5px 10px;
+    line-height: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #000;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    display: flex;
+}
+.item-option p{
+    font-size: 15px;
+	margin: 0;
+	margin-left: 5px;
+}
+/*Caracteristicas de la pagina de contenido*/
+.main-content{
+    margin-top: 60px; 
+    width: 100%;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+.content-page{
+    margin: auto;
+    padding: 10px;
+    width: calc(100% - 20px);
+    max-width: 1180px; /*Maximo de estiramiento de la pagina*/
+}
+/*Caracterisitcas de la pagina producto*/
+.content-page section{
+    display: flex;
+	width: 100%;
+    background: #fff;
+}
+.parte1{
+    padding: 5px;
+    width: calc(60% - 10px);
+}
+.parte2{
+    padding: 5px;
+    width: calc(40% - 10px);
+    margin: 20px 0;
+}
+.parte1 img{
+    width: 100%;
+}
+.parte2 *{ /*El asteristico afecta a todo dentro de parte2*/
+    margin: 10px 0;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+.parte2 h2{
+    color: #000;
+    font-size: 30px; 
+}
+.parte2 h1{
+    color: #d86a6a;
+    font-size: 45px; 
+}
+.parte2 h1 span{
+    color: #d86a6a; 
+    font-size: 30px;  
+}
+.parte2 h3{
+    color: #000;
+    font-weight: normal;
+}
+button{
+	border-style: none;
+	border-radius: 5px;
+	padding: 13px 20px;
+	color: #fff;
+	background: #c71212;
+	cursor: pointer;
+	font-size: 16px;
+}
+.parte2 button{ /*Boton de comprar*/
+    border-style: none;
+    border-radius: 15px;
+    padding: 13px 20px;
+    color: #fff;
+    background: #c71212;
+    font-size: 16px;
+}
+/*Titulo de productos destacados*/
+.title-section{ 
+    padding: 10px 0;
+    font-size: 20px;
+    color: #000;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+/*Formato de los productos*/
+.product-list{
+    display: table;
+    width: 100%;
+}
+.product-box{
+    display: inline-table; /*Para acomodar en forma de tabla*/
+    padding: 10px;
+    width: calc(100%/5 - 20px); /*Para que entren 5 productos en una fila*/
+}
+.product-box a{
+    text-decoration: none;
+}
+.product{
+	object-fit: contain;
+    width: 100%;
+    border-radius: 10px; /*Radio de 10px para borde*/
+    box-shadow: 0 0 8px 3px #f6f3ed; /*Sombra*/
+    background-color: #fff;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+.product img{
+    width: 100%;
+    border-radius: 10px 10px 0 0; /*Esquinas*/
+}
+
+/*Detalles de los productos*/
+.detail-title{
+    padding: 5px;
+    text-align: center;
+    font-size: 18px;
+    color: #000;
+    width: calc(100% - 10px);
+    height: 35px;
+}
+.detail-description{
+    text-align: center;
+    font-size: 14px;
+    color: #000;
+    padding: 5px;
+    width: calc(100% - 10px);
+    height: 34px; /*El recuadro de descripcion siempre tiene esta altura*/
+}
+.detail-precio{
+    text-align: center;
+    font-size: 25px;
+    color: #d86a6a;
+    padding: 5px;
+    width: calc(100% - 10px);
+}
+.detail-precio span{
+    font-size: 15px;
+}
+a{
+	color: #fff;
+}
+.body-pedidos{
+	width: 100%;
+}
+.item-pedido{
+	display: flex;
+	border: 1px #ccc solid;
+	margin-bottom: 5px;
+	background: #fff;
+}
+.pedido-img{
+	width: 200px;
+}
+.pedido-img img{
+	width: 100%;
+}
+.pedido-detalle{
+	padding: 10px;
+	width: calc(100% - 220px);
+}
+.pedido-detalle h3,
+.pedido-detalle p{
+	margin: 5px 0;
+}
+.ipt-procom{
+	width: 250px;
+	margin-bottom: 5px;
+}
+.p-line{
+	display: flex;
+}
+.p-line div{
+	width: 150px;
+	font-weight: 600;
+}
+.menu-opciones{
+	width: 160px;
+	background: #fff;
+	position: fixed;
+	top: 70px;
+    right: 50px;
+	color: #333;
+	box-shadow: 0 0 8px 3px rgb(150,150,150);
+	border-radius: 5px;
+}
+.menu-opciones ul{
+	margin: 0;
+	padding: 0;
+}
+.menu-opciones ul li{
+	display: block;
+}
+.menu-opciones ul li a{
+	color: #333;
+	font-size: 13px;
+	text-decoration: none;
+}
+.menu-opcion{
+	padding: 10px 15px;
+}
+.menu-opciones2{
+	width: 160px;
+	background: #fff;
+	position: fixed;
+	top: 70px;
+    right: 50px;
+	color: #333;
+	box-shadow: 0 0 8px 3px rgb(150,150,150);
+	border-radius: 5px;
+}
+.menu-opciones2 ul{
+	margin: 0;
+	padding: 0;
+}
+.menu-opciones2 ul li{
+	display: block;
+}
+.menu-opciones2 ul li a{
+	color: #333;
+	font-size: 13px;
+	text-decoration: none;
+}
+.menu-opcion2{
+	padding: 10px 15px;
+}
+.btn-delete-cart{
+	padding: 5px 0;
+	text-decoration: underline;
+	color: blue;
+	background: transparent;
+}
+.menu-movil{
+	display: none;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}
+.menu-movil2{
+	display: block;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}
+.menu-opciones2{
+    right: 10px;
+}
+footer{
+	background: #000;
+	width: 100%;
+}
+.body-footer{
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+.body-footer h5{
+	margin: 0;
+	color: #aaa;
+}
+.div-flex{
+	display: flex;
+}
+.div-flex .part{
+	padding: 0 10px;
+	width: 50%;
+}
+.div-flex .part h4{
+	margin: 0;
+	color: #fff;
+}
+.div-flex .part p{
+	color: #fff;
+}
+.mb20{
+	margin-bottom: 20px;
+}
+.mb10{
+	margin-bottom: 10px!important;
+}
+
+/*Acomodo en la visualizacion en dispositivos, diseño responsivo */
+@media(max-width: 850px){
+	.product-box {
+	    width: calc(100%/4 - 20px);
+	}
+}
+@media(max-width: 700px){
+	.product-box {
+	    width: calc(100%/3 - 20px);
+	}
+	.options-place{
+		width: 200px;
+	}
+	.search-place{
+		width: calc(100% - 250px);
+	}
+}
+@media(max-width: 500px){
+	.product-box {
+	    width: calc(100%/2 - 20px);
+	}
+	.options-place{
+		display: none;
+	}
+	.menu-movil{
+		display: block;
+	}
+    .menu-movil2{
+		display: none;
+	}
+	.logo-place{
+		width: 100px;
+		margin-top: 2px;
+	}
+	.search-place{
+		width: calc(100% - 170px);
+	}
+	.menu-opciones {
+	    right: 10px;
+	}
+	.content-page section{
+		display: block;
+	}
+	.part2{
+		width: calc(100% - 20px);
+	}
+	.part2 h2,.part2 h1,.part2 h3{
+		margin: 0;
+	}
+	.part2 h2{
+		font-size: 20px;
+	}
+	.part2 h1{
+		font-size: 25px;
+	}
+	.part2 h1 span{
+		font-size: 16px;
+	}
+	.part2 h4{
+		font-size: 14px;
+	}
+	.pedido-img{
+		width: 120px;
+	}
+	.pedido-detalle{
+		width: calc(100% - 140px);
+	}
+	h3{
+		margin: 10px 0;
+	}
+}
